@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
@@ -32,6 +32,7 @@ export class AppComponent implements OnInit {
   and = ['a','n','d'];
   natural = ['n','a','t','u','r','a','l'];
   riches = ['r','i','c','h','e','s'];
+  menu = signal(1);
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
@@ -40,7 +41,7 @@ export class AppComponent implements OnInit {
     })
     lenis.on('scroll', ScrollTrigger.update)
     gsap.ticker.add((time) => {
-      lenis.raf(time * 1000)
+      lenis.raf(time * 500)
     })
     gsap.ticker.lagSmoothing(0);
 
@@ -171,6 +172,18 @@ export class AppComponent implements OnInit {
       y: e.clientY - 960 + 'px',
       delay: .1,
     })
+  }
+
+  menuBurger() {
+    if(this.menu() === 1) {
+      alert("avant");
+      this.menu.set(2);
+    }else{
+      if(this.menu() === 2) {
+        alert("après");
+        this.menu.set(1);
+      }
+    }
   }
 
 }

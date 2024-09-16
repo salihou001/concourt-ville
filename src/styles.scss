@@ -17,3 +17,38 @@ body {
     height: 100%;
     font-family: "Urbanist", system-ui;
 }
+
+
+/* Styler la largeur et la couleur de la barre de défilement */
+::-webkit-scrollbar {
+    width: 5px; /* Largeur de la barre de défilement verticale */
+  }
+  
+//   /* Style pour le fond de la barre de défilement */
+  ::-webkit-scrollbar-track {
+    background: black; /* Couleur de fond de la barre */
+    border-radius: 10px;
+  }
+  
+//   /* Style pour le curseur (la partie qui se déplace) */
+//   ::-webkit-scrollbar-thumb {
+//     background-color: rgb(211, 6, 177); /* Couleur du curseur */
+//     border-radius: 10px; /* Arrondir les bords du curseur */
+//   }
+
+  /* Scrollbar personnalisée avec effets de transition */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Dégradé de couleurs */
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff4e50, #f9d423); /* Changement de dégradé au survol */
+  }
+  
+  /* Changement de couleur au survol */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Couleur du curseur au survol */
+  }
+  

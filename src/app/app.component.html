@@ -1,4 +1,4 @@
-<div class="super-container w-screen min-h-[1200px] bg-black">
+<div class="super-container w-screen min-h-[1200px] bg-black relative">
     <!-- header start -->
     <header class="w-full flex items-center justify-between h-[100px] px-[45px]">
         <div class="header_left-block flex items-center gap-2">
@@ -18,7 +18,7 @@
                 <div
                     class="flex items-center justify-center px-[20px] py-[10px] rounded-[100px] border border-white bg-black cursor-pointer text-white">
                     Book your hotel</div>
-                <div
+                <div (click)="menuBurger()"
                     class="h-[45px] w-[45px] rounded-full bg-black flex items-center justify-center cursor-pointer border border-whiteo">
                     <img class="w-[23px] h-[23px]" src="menu-2.svg" alt="menu burger">
                 </div>
@@ -140,7 +140,7 @@
         <section class="about bg-[#101010] mt-[25px] rounded-[10px] w-full py-12 px-8 ">
             <div class="flex items-center gap-4 w-full justify-between">
                 <div class="self-start text-white w-1/2">
-                    <h1 class="font-[700] text-[50px] leading-[60px] mb-6">À propos de <span>Douala</span></h1>
+                    <h1 class="font-[700] text-[50px] leading-[60px] mb-8">À propos de <span>Douala</span></h1>
                     <h4 class="font-[500] text-[31px] leading-[37.2px] mb-4">Histoire de la ville</h4>
                     <p class="font-[500] text-[20px] leading-[37.2px] text-[#8B8B8B] mb-4">Autrefois, des étrangers
                         (parmi
