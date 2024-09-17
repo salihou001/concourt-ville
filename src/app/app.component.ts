@@ -167,11 +167,9 @@ export class AppComponent implements OnInit {
   }
 
   moveCursor(e: any) {
-    // console.log(e.clientX, e.clientY);
-
     gsap.to(".cursor-contain", {
-      x: e.clientX - 600 + 'px',
-      y: e.clientY - 800 + 'px',
+      x: e.clientX - 10 + 'px',
+      y: e.clientY - 640 + 'px',
       delay: .1,
     })
   }
