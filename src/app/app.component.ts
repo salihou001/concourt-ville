@@ -4,16 +4,19 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
 import gsap from 'gsap';
 import CustomEase from 'gsap/CustomEase';
+import { BlockCardComponent } from "./shared/block-card/block-card.component";
+import { Block } from './shared/interface/interface';
 
 const myEase = CustomEase.create("abouEase", "1.000, 0.005, 0.000, 0.995");
 
 
 // gsap.registerPlugin(ScrollTrigger);
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, BlockCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -35,6 +38,33 @@ export class AppComponent implements OnInit {
   and = ['a', 'n', 'd'];
   natural = ['n', 'a', 't', 'u', 'r', 'a', 'l'];
   riches = ['r', 'i', 'c', 'h', 'e', 's'];
+
+  listBlock: Block[] = [
+    {
+      id: '1',
+      image: 'Rectangle 3', 
+      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE', 
+      l_text: "L'histoire de la maison des célibataires est intrinsèquement liée à celle d'Adolph Woermann, cet homme d'affaires qui convint Otto von Bismarck d'établir un protectorat au Kamerun."
+    },
+    {
+      id: '2',
+      image: 'Rectangle 15', 
+      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE', 
+      l_text: "L'histoire de la maison des célibataires est intrinsèquement liée à celle d'Adolph Woermann, cet homme d'affaires qui convint Otto von Bismarck d'établir un protectorat au Kamerun."
+    },
+    {
+      id: '3',
+      image: 'Rectangle 21', 
+      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE', 
+      l_text: "L'histoire de la maison des célibataires est intrinsèquement liée à celle d'Adolph Woermann, cet homme d'affaires qui convint Otto von Bismarck d'établir un protectorat au Kamerun."
+    },
+    {
+      id: '4',
+      image: 'Rectangle 17', 
+      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE', 
+      l_text: "L'histoire de la maison des célibataires est intrinsèquement liée à celle d'Adolph Woermann, cet homme d'affaires qui convint Otto von Bismarck d'établir un protectorat au Kamerun."
+    },
+  ]
 
   ngOnInit(): void { }
   ngAfterViewInit(): void {
@@ -211,5 +241,77 @@ export class AppComponent implements OnInit {
         ease: myEase
       })
   }
-
+  
 }
+
+// ScrollTrigger.create({
+//   trigger: ".box-container",
+//   start: "top top",
+//   endTrigger: "#otherID",
+//   end: "bottom 50%+=100px",
+//   onToggle: (self) => console.log("toggled, isActive:", self.isActive),
+//   onUpdate: (self) => {
+//     console.log(
+//       "progress:",
+//       self.progress.toFixed(3),
+//       "direction:",
+//       self.direction,
+//       "velocity",
+//       self.getVelocity()
+//     );
+//     if (self.direction > 0) {
+//       const TL = gsap.timeline();
+//       TL
+//         .to('.box-container', {
+//           width: '70%',
+//           height: '5%',
+//           top: '20px',
+//           ease: myEase
+//         })
+//         .to('.header_img', {
+//           borderRadius: '50px',
+//           ease: myEase
+//         },"<")
+//         .to('.text-about,.text-portfolio', {
+//           opacity: 0,
+//           y: '*',
+//           ease: myEase
+//         }, "<")
+//         .to('.header', {
+//           padding: '0 1%',
+//           top:'10',
+//           left: '0%',
+//           x: -'50%',
+//           y: -'50%',
+//           marginTop: 0,
+//         }, "<")
+//     } else {
+//       const TL = gsap.timeline();
+//       TL
+//         .to('.box-container', {
+//           width: '100%',
+//           top: 0,
+//           height: '100%',
+//           ease: myEase
+//         })
+//         .to('.header_img', {
+//           borderRadius: '0px',
+//           ease: myEase
+//         },"<")
+//         .to('.circle', {
+//           y: '-100px',
+//           opacity: 1,
+//           ease: myEase
+//         }, "<")
+//         .to('.noice', {
+//           y: '*',
+//           opacity: 1,
+//           ease: myEase
+//         }, "<")
+//         .to('.header', {
+//           padding: '0 5%'
+//         }, "<")
+//     }
+//   },
+// })
+// }
