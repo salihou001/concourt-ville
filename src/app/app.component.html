@@ -1,27 +1,30 @@
 <div class="super-container w-screen min-h-[1200px] bg-black relative" (mousemove)="moveCursor($event)">
     <div class="menu-container w-screen h-screen fixed z-10 top-0 -right-[105%] bg-white">
         <div class="menu-container-body relative h-full w-full flex flex-col">
-            <div class="close absolute right-16 top-16 z-20 cursor-pointer" (click)="closeMenu()"><img class="w-[43px] h-[43px]"
-                    src="close-1.svg" alt="close icon"></div>
-                    <div class="menu-wrapper h-full w-full flex items-center justify-center">
-                        <div class="menu-items flex flex-col items-center gap-6">
-                            <div class="menu-1 px-4 h-[60px] leading-[50px] font-[900] cursor-pointer overflow-hidden" (mouseenter)="fromUp('1')" (mouseleave)="fromUp('1')" >
-                                @for (item of home; track $index) {
-                                    <span class="chart inline-block text-[60px] text-black">{{item}}</span>
-                                    }
-                            </div>
-                            <div class="menu-2 px-4 h-[60px] leading-[50px] font-[900] cursor-pointer overflow-hidden" (mouseenter)="fromUp('2')" (mouseenter)="fromUp('2')" >
-                                @for (item of hotel; track $index) {
-                                    <span class="chart inline-block text-[60px] text-black">{{item}}</span>
-                                    }
-                            </div>
-                            <div class="menu-3 px-4 h-[60px] leading-[50px] font-[900] cursor-pointer overflow-hidden" (mouseenter)="fromUp('3')" (mouseenter)="fromUp('3')" >
-                                @for (item of discover; track $index) {
-                                    <span class="chart inline-block text-[60px] text-black">{{item}}</span>
-                                    }
-                            </div>
-                        </div>
+            <div class="close absolute right-16 top-16 z-20 cursor-pointer" (click)="closeMenu()"><img
+                    class="w-[43px] h-[43px]" src="close-1.svg" alt="close icon"></div>
+            <div class="menu-wrapper h-full w-full flex items-center justify-center">
+                <div class="menu-items flex flex-col items-center gap-6">
+                    <div class="menu-1 px-4 h-[60px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
+                        (mouseenter)="fromUp('1')" (mouseleave)="fromUp('1')">
+                        @for (item of home; track $index) {
+                        <span class="chart inline-block text-[60px] text-black">{{item}}</span>
+                        }
                     </div>
+                    <div class="menu-2 px-4 h-[60px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
+                        (mouseenter)="fromUp('2')" (mouseenter)="fromUp('2')">
+                        @for (item of hotel; track $index) {
+                        <span class="chart inline-block text-[60px] text-black">{{item}}</span>
+                        }
+                    </div>
+                    <div class="menu-3 px-4 h-[60px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
+                        (mouseenter)="fromUp('3')" (mouseenter)="fromUp('3')">
+                        @for (item of discover; track $index) {
+                        <span class="chart inline-block text-[60px] text-black">{{item}}</span>
+                        }
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- header start -->
@@ -177,9 +180,9 @@
                         disputes entre les clans Bell, Akwa et Deïdo. Appelés en
                         médiateurs, les anglais n'ont pas répondu.</p>
                     <div
-                        class="flex items-center w-[187px] mt-8 gap-4 px-[20px] py-[10px] rounded-[100px] text-black bg-[#FFF455] cursor-pointer text-[19.3px] leading-[23.16px] font-[400]">
+                        class="flex items-center w-[177px] mt-8 gap-2 px-[20px] py-[10px] rounded-[100px] text-black bg-[#FFF455] cursor-pointer text-[18px] leading-[23.16px] font-[400]">
                         <div class="whitespace-nowrap">En sovoir plus</div>
-                        <div><img src="arrow-right-1.svg" alt="arrow right"></div>
+                        <div><img class="w-[24.3px] h-[24.3px]" src="arrow-right-1.svg" alt="arrow right"></div>
                     </div>
                 </div>
                 <div class="relative">
@@ -197,15 +200,16 @@
     <!-- section about end -->
     <div class="patrimoine-title px-[45px] pt-[87px]">
         <p class="font-[700] text-[40px] leading-[50px] text-white mb-[10px]">Patrimoine culturel</p>
-        <p class="font-[700] text-[21px] leading-[27.2px] text-[#8B8B8B]">Nos sites historiques, des musées, des arts et de la culture locale.</p>
+        <p class="font-[700] text-[21px] leading-[27.2px] text-[#8B8B8B]">Nos sites historiques, des musées, des arts et
+            de la culture locale.</p>
     </div>
     <!-- start patri  -->
     <section class="patrimoine px-[45px] mt-[70px]">
         <div class="grid grid-cols-2 grid-rows-2 h-[900px] gap-2">
             @for (item of listBlock; track $index) {
-                @defer () {
-                    <app-block-card [item]="item" />
-                }
+            @defer () {
+            <app-block-card [item]="item" />
+            }
             }
         </div>
     </section>
@@ -215,23 +219,48 @@
         <video class="w-full h-full" loop muted autoplay src="demo.mp4"></video>
     </section>
 
-    <div class="sejourner-title w-full pl-[45px] border border-slate-50 mt-[70px]">
+    <div class="sejourner-title w-full pl-[45px] mt-[70px]">
         <div class="w-full text-white">
-            <p class="font-[700] text-[50px] leading-[60px]">OÙ SÉJOURNER</p>
+            <p class="font-[700] text-[50px] leading-[60px] mb-[10px]">OÙ SÉJOURNER</p>
             <div class="flex items-center gap-2">
-                <div>PARCOURIR TOUS LES HÔTELS</div>
+                <div>Parcourir tous les hôtels</div>
                 <div><img src="arrow-right-3.svg" alt=""></div>
             </div>
         </div>
     </div>
     <!-- sejourner -->
-    <section class="sejourner mt-[100px] min-w-screen min-h-[500px] border border-slate-50">
-        <!-- <img class="w-full" src="Rectangle 12.svg" alt=""> -->
+    <section class="sejourner mt-[70px] w-full min-h-[500px] px-[45px]">
+        <div class="flex items-center w-full justify-between py-8">
+            <div class="w-[40%]">
+                <p class="font-[700] text-[21px] leading-[27.2px] text-[#8B8B8B]">AKWA PALACE DOUALA est un complexe
+                    hôtelier 4 étoiles situé au cœur de la ville de Douala, capitale
+                    économique du Cameroun, et à proximité de la plupart des centres d’intérêt.</p>
+                <div class="w-full flex items-start mt-[20px] justify-start">
+                    <div class="flex items-center gap-2 cursor-pointer">
+                        <div class="text-white text-[19.3px] font-[700] leading-[23.16px]">En savoir plus</div>
+                        <div><img src="arrow-right-3.svg" alt="arrow right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative w-[50%]">
+                <!-- arrets  -->
+                <img class="absolute -top-4 -right-4" src="top-right.svg" alt="">
+                <img class="absolute -bottom-4 -left-4" src="bottom-left.svg" alt="">
+                <!-- arrets  -->
+                <img class="h-[600px] w-full  object-cover" src="Rectangle 11.svg" alt="">
+            </div>
+        </div>
     </section>
     <!-- sejourner -->
 
-    
-    <section class="w-full h-[800px]"></section>
+    <!-- section card -->
+    <section class="w-full h-[500px] border border-slate-50 mt-[70px] px-[45px]">
+        <div class="w-full h-full border border-slate-50 grid grid-cols-3 grid-rows-1 gap-4">
+            <div class="border border-slate-50"></div>
+            <div class="border border-slate-50"></div>
+            <div class="border border-slate-50"></div>
+        </div>
+    </section>
     <section class="w-full h-[800px]"></section>
 
     <div class="cursor-contain z-50 absolute w-[20px] h-[20px] rounded-full bg-red-500"></div>
