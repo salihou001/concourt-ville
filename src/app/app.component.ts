@@ -4,8 +4,9 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
 import gsap from 'gsap';
 import CustomEase from 'gsap/CustomEase';
-import { BlockCardComponent } from "./shared/block-card/block-card.component";
-import { Block } from './shared/interface/interface';
+import { BlockCardComponent } from "./shared/components/block-card/block-card.component";
+import { Block, Hotel } from './shared/interface/interface';
+import { CardHotelComponent } from "./shared/components/card-hotel/card-hotel.component";
 
 const myEase = CustomEase.create("abouEase", "1.000, 0.005, 0.000, 0.995");
 
@@ -16,7 +17,7 @@ const myEase = CustomEase.create("abouEase", "1.000, 0.005, 0.000, 0.995");
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, BlockCardComponent],
+  imports: [RouterOutlet, BlockCardComponent, CardHotelComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -65,6 +66,23 @@ export class AppComponent implements OnInit {
       l_text: "L'histoire de la maison des célibataires est intrinsèquement liée à celle d'Adolph Woermann, cet homme d'affaires qui convint Otto von Bismarck d'établir un protectorat au Kamerun."
     },
   ]
+  listHotels: Hotel[] = [
+    {
+      id: '1',
+      image: 'Rectangle 9', 
+      desc: 'Douala Design Hôtel'
+    },
+    {
+      id: '2',
+      image: 'Rectangle 11', 
+      desc: 'Douala Design Hôtel'
+    },
+    {
+      id: '3',
+      image: 'Rectangle 12',
+      desc: 'Douala Design Hôtel'
+    },
+  ]
 
   ngOnInit(): void { }
   ngAfterViewInit(): void {
@@ -80,15 +98,15 @@ export class AppComponent implements OnInit {
     const TL = gsap.timeline({});
     TL
       .fromTo('.chart', {
-        y: '40px',
+        y: '45px',
         opacity: 0,
-        scaleX: -3.5
+        // scaleX: -3.5
       }, {
         y: '*',
         stagger: {
           amount: 1
         },
-        scaleX: 1,
+        // scaleX: 1,
         opacity: 1,
         duration: 3,
         delay: 2,
@@ -224,9 +242,9 @@ export class AppComponent implements OnInit {
     }, {
       y: '*',
       stagger: {
-        amount: .1
+        amount: .2
       },
-      ease: myEase
+      ease: 'sine.out'
     })
   }
 

@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import gsap from 'gsap';
-import { Block } from '../interface/interface';
+import { Block } from '../../interface/interface';
 
 @Component({
   selector: 'app-block-card',
