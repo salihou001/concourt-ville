@@ -40,41 +40,43 @@ export class AppComponent implements OnInit {
   natural = ['n', 'a', 't', 'u', 'r', 'a', 'l'];
   riches = ['r', 'i', 'c', 'h', 'e', 's'];
 
+  slide = signal(1);
+
   listBlock: Block[] = [
     {
       id: '1',
-      image: 'Rectangle 3', 
-      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE', 
+      image: 'Rectangle 3',
+      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE',
       l_text: "L'histoire de la maison des célibataires est intrinsèquement liée à celle d'Adolph Woermann, cet homme d'affaires qui convint Otto von Bismarck d'établir un protectorat au Kamerun."
     },
     {
       id: '2',
-      image: 'Rectangle 15', 
-      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE', 
+      image: 'Rectangle 15',
+      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE',
       l_text: "L'histoire de la maison des célibataires est intrinsèquement liée à celle d'Adolph Woermann, cet homme d'affaires qui convint Otto von Bismarck d'établir un protectorat au Kamerun."
     },
     {
       id: '3',
-      image: 'Rectangle 21', 
-      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE', 
+      image: 'Rectangle 21',
+      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE',
       l_text: "L'histoire de la maison des célibataires est intrinsèquement liée à celle d'Adolph Woermann, cet homme d'affaires qui convint Otto von Bismarck d'établir un protectorat au Kamerun."
     },
     {
       id: '4',
-      image: 'Rectangle 17', 
-      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE', 
+      image: 'Rectangle 17',
+      f_text: 'ANCIENNE MAISON DES CÉLIBATAIRES DE LA WOERMANN LINIE',
       l_text: "L'histoire de la maison des célibataires est intrinsèquement liée à celle d'Adolph Woermann, cet homme d'affaires qui convint Otto von Bismarck d'établir un protectorat au Kamerun."
     },
   ]
   listHotels: Hotel[] = [
     {
       id: '1',
-      image: 'Rectangle 9', 
+      image: 'Rectangle 9',
       desc: 'Douala Design Hôtel'
     },
     {
       id: '2',
-      image: 'Rectangle 11', 
+      image: 'Rectangle 11',
       desc: 'Douala Design Hôtel'
     },
     {
@@ -97,7 +99,7 @@ export class AppComponent implements OnInit {
 
     const TL = gsap.timeline({});
     TL
-      .fromTo('.chart', {
+      .fromTo('.hero .chart', {
         y: '45px',
         opacity: 0,
         // scaleX: -3.5
@@ -223,29 +225,29 @@ export class AppComponent implements OnInit {
   }
 
   openMenu() {
-      const TL = gsap.timeline();
-      TL
-        .fromTo(".menu-container", {
-          right: '-105%'
-        }, {
-          right: 0,
-          duration: 1,
-          ease: myEase
-        })
-  }
-
-  fromUp(row:string) {
     const TL = gsap.timeline();
     TL
-    .fromTo(`.menu-${row} .chart`, {
-      y: '-55px',
-    }, {
-      y: '*',
-      stagger: {
-        amount: .2
-      },
-      ease: 'sine.out'
-    })
+      .fromTo(".menu-container", {
+        right: '-105%'
+      }, {
+        right: 0,
+        duration: 1,
+        ease: myEase
+      })
+  }
+
+  fromUp(row: string) {
+    const TL = gsap.timeline();
+    TL
+      .fromTo(`.menu-${row} .chart`, {
+        y: '-55px',
+      }, {
+        y: '*',
+        stagger: {
+          amount: .2
+        },
+        ease: 'sine.out'
+      })
   }
 
   closeMenu() {
@@ -259,77 +261,166 @@ export class AppComponent implements OnInit {
         ease: myEase
       })
   }
-  
+  prevuis() {
+    if (this.slide() === 2) {
+      const TL = gsap.timeline();
+      TL
+        .to(".row", {
+          xPercent: 0,
+          duration: 1.5,
+          ease: myEase
+        })
+        .to(".vertical-row", {
+          yPercent: 0,
+          duration: 1.5,
+          ease: myEase
+        }, "<")
+      this.slide.set(1);
+    } else {
+      if (this.slide() === 3) {
+        const TL = gsap.timeline();
+        TL
+          .to(".row", {
+            xPercent: -100,
+            duration: 1.5,
+            ease: myEase
+          })
+          .to(".vertical-row", {
+            yPercent: -100,
+            duration: 1.5,
+            ease: myEase
+          }, "<")
+        this.slide.set(2);
+      } else {
+        if (this.slide() === 4) {
+          const TL = gsap.timeline();
+          TL
+            .to(".row", {
+              xPercent: -200,
+              duration: 1.5,
+              ease: myEase
+            })
+            .to(".vertical-row", {
+              yPercent: -180,
+              duration: 1.5,
+              ease: myEase
+            }, "<")
+          this.slide.set(3);
+        } else {
+          if (this.slide() === 5) {
+            const TL = gsap.timeline();
+            TL
+              .to(".row", {
+                xPercent: -300,
+                duration: 1.5,
+                ease: myEase
+              })
+              .to(".vertical-row", {
+                yPercent: -260,
+                duration: 1.5,
+                ease: myEase
+              }, "<")
+            this.slide.set(4);
+          } else {
+            if (this.slide() === 6) {
+              const TL = gsap.timeline();
+              TL
+                .to(".row", {
+                  xPercent: -400,
+                  duration: 1.5,
+                  ease: myEase
+                })
+                .to(".vertical-row", {
+                  yPercent: -325,
+                  duration: 1.5,
+                  ease: myEase
+                }, "<")
+              this.slide.set(5);
+            }
+          }
+        }
+      }
+    }
+  }
+  next() {
+    if (this.slide() === 1) {
+      const TL = gsap.timeline();
+      TL
+        .to(".row", {
+          xPercent: -100,
+          duration: 1.5,
+          ease: myEase
+        })
+        .to(".vertical-row", {
+          yPercent: -100,
+          duration: 1.5,
+          ease: myEase
+        }, "<")
+      this.slide.set(2);
+    } else {
+      if (this.slide() === 2) {
+        const TL = gsap.timeline();
+        TL
+          .to(".row", {
+            xPercent: -200,
+            duration: 1.5,
+            ease: myEase
+          })
+          .to(".vertical-row", {
+            yPercent: -180,
+            duration: 1.5,
+            ease: myEase
+          }, "<")
+        this.slide.set(3);
+      } else {
+        if (this.slide() === 3) {
+          const TL = gsap.timeline();
+          TL
+            .to(".row", {
+              xPercent: -300,
+              duration: 1.5,
+              ease: myEase
+            })
+            .to(".vertical-row", {
+              yPercent: -260,
+              duration: 1.5,
+              ease: myEase
+            }, "<")
+          this.slide.set(4);
+        } else {
+          if (this.slide() === 4) {
+            const TL = gsap.timeline();
+            TL
+              .to(".row", {
+                xPercent: -400,
+                duration: 1.5,
+                ease: myEase
+              })
+              .to(".vertical-row", {
+                yPercent: -330,
+                duration: 1.5,
+                ease: myEase
+              }, "<")
+            this.slide.set(5);
+          } else {
+            if (this.slide() === 5) {
+              const TL = gsap.timeline();
+              TL
+                .to(".row", {
+                  xPercent: -500,
+                  duration: 1.5,
+                  ease: myEase
+                })
+                .to(".vertical-row", {
+                  yPercent: -400,
+                  duration: 1.5,
+                  ease: myEase
+                }, "<")
+              this.slide.set(6);
+            }
+          }
+        }
+      }
+    }
+  }
 }
-
-// ScrollTrigger.create({
-//   trigger: ".box-container",
-//   start: "top top",
-//   endTrigger: "#otherID",
-//   end: "bottom 50%+=100px",
-//   onToggle: (self) => console.log("toggled, isActive:", self.isActive),
-//   onUpdate: (self) => {
-//     console.log(
-//       "progress:",
-//       self.progress.toFixed(3),
-//       "direction:",
-//       self.direction,
-//       "velocity",
-//       self.getVelocity()
-//     );
-//     if (self.direction > 0) {
-//       const TL = gsap.timeline();
-//       TL
-//         .to('.box-container', {
-//           width: '70%',
-//           height: '5%',
-//           top: '20px',
-//           ease: myEase
-//         })
-//         .to('.header_img', {
-//           borderRadius: '50px',
-//           ease: myEase
-//         },"<")
-//         .to('.text-about,.text-portfolio', {
-//           opacity: 0,
-//           y: '*',
-//           ease: myEase
-//         }, "<")
-//         .to('.header', {
-//           padding: '0 1%',
-//           top:'10',
-//           left: '0%',
-//           x: -'50%',
-//           y: -'50%',
-//           marginTop: 0,
-//         }, "<")
-//     } else {
-//       const TL = gsap.timeline();
-//       TL
-//         .to('.box-container', {
-//           width: '100%',
-//           top: 0,
-//           height: '100%',
-//           ease: myEase
-//         })
-//         .to('.header_img', {
-//           borderRadius: '0px',
-//           ease: myEase
-//         },"<")
-//         .to('.circle', {
-//           y: '-100px',
-//           opacity: 1,
-//           ease: myEase
-//         }, "<")
-//         .to('.noice', {
-//           y: '*',
-//           opacity: 1,
-//           ease: myEase
-//         }, "<")
-//         .to('.header', {
-//           padding: '0 5%'
-//         }, "<")
-//     }
-//   },
-// })
-// }

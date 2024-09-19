@@ -4,6 +4,14 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: 'Urbanist-bold';
+  src: url('/fonts/Urbanist/Urbanist-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,6 +24,12 @@ body {
     width: 100%;
     height: 100%;
     font-family: "Urbanist", system-ui;
+    @font-face {
+      font-family: 'Urbanist';
+      src: url('/fonts/Urbanist/Urbanist-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 }
 
 
