@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, Renderer2, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
@@ -41,6 +41,8 @@ export class AppComponent implements OnInit {
   riches = ['r', 'i', 'c', 'h', 'e', 's'];
 
   slide = signal(1);
+  private mouseMoveListener: any;
+  private renderer = inject(Renderer2);
 
   listBlock: Block[] = [
     {
@@ -86,7 +88,15 @@ export class AppComponent implements OnInit {
     },
   ]
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    // this.mouseMoveListener = this.renderer.listen('window', 'mousemove', (e: MouseEvent) => {
+    //   gsap.to(".cursor-contain", {
+    //     x: e.clientX - 10 + 'px',
+    //     y: e.clientY - 780 + 'px',
+    //     delay: .1,
+    //   })
+    // })
+  }
   ngAfterViewInit(): void {
     const lenis = new Lenis();
     lenis.on('scroll', (e: any) => {
@@ -102,16 +112,14 @@ export class AppComponent implements OnInit {
       .fromTo('.hero .chart', {
         y: '45px',
         opacity: 0,
-        // scaleX: -3.5
       }, {
         y: '*',
         stagger: {
           amount: 1
         },
-        // scaleX: 1,
         opacity: 1,
         duration: 3,
-        delay: 2,
+        delay: 3,
         ease: 'elastic'
       })
       .fromTo('.arret-1', {
@@ -216,13 +224,13 @@ export class AppComponent implements OnInit {
       }, "<-1")
   }
 
-  moveCursor(e: any) {
-    gsap.to(".cursor-contain", {
-      x: e.clientX - 10 + 'px',
-      y: e.clientY - 640 + 'px',
-      delay: .1,
-    })
-  }
+  // moveCursor(e: any) {
+  //   gsap.to(".cursor-contain", {
+  //     x: e.clientX - 10 + 'px',
+  //     y: e.clientY - 640 + 'px',
+  //     delay: .1,
+  //   })
+  // }
 
   openMenu() {
     const TL = gsap.timeline();
