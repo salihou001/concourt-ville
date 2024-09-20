@@ -1,0 +1,28 @@
+<div class="menu-container w-screen h-screen fixed z-10 top-0 -right-[105%] bg-white">
+    <div class="menu-container-body relative h-full w-full flex flex-col">
+        <div class="close absolute right-16 top-16 z-20 cursor-pointer" (click)="closeMenu()"><img
+                class="w-[43px] h-[43px]" src="close-1.svg" alt="close icon"></div>
+        <div class="menu-wrapper h-full w-full flex items-center justify-center">
+            <div class="menu-items flex flex-col items-start gap-4">
+                <div class="menu-1 px-4 h-[40px] leading-[50px] font-[900] cursor-pointer overflow-hidden" 
+                    (mouseenter)="fromUp('1')" (mouseleave)="fromUp('1')" (click)="goToHome()">
+                    @for (item of home; track $index) {
+                    <span class="chart inline-block text-[40px] font-Urbanist-bold text-black">{{item}}</span>
+                    }
+                </div>
+                <div class="menu-2 px-4 h-[40px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
+                    (mouseenter)="fromUp('2')" (mouseenter)="fromUp('2')">
+                    @for (item of hotels; track $index) {
+                    <span class="chart inline-block text-[40px] font-Urbanist-bold text-black">{{item}}</span>
+                    }
+                </div>
+                <div class="menu-3 px-4 h-[40px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
+                    (mouseenter)="fromUp('3')" (mouseenter)="fromUp('3')">
+                    @for (item of restaurants; track $index) {
+                    <span class="chart inline-block text-[40px] font-Urbanist-bold text-black">{{item}}</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

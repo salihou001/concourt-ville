@@ -119,7 +119,7 @@ export class HomeComponent implements OnInit {
         },
         opacity: 1,
         duration: 3,
-        delay: 3,
+        delay: 2,
         ease: 'elastic'
       })
       .fromTo('.arret-1', {

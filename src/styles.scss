@@ -87,3 +87,9 @@ li::before {
 li:hover::before {
   transform: translateX(0%);
 }
+
+.super-container {
+  width: 100vw;
+  background: #000;
+  position: relative;
+}
