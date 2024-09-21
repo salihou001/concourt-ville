@@ -213,6 +213,19 @@ export class HomeComponent implements OnInit {
         duration: 1,
         ease: myEase
       }, "<-1")
+      .to(".vertical-row div", {
+        scrollTrigger: {
+          trigger: '.vertical-row div',
+          scrub: 1,
+          start: 'bottom 40%',
+          end: 'bottom bottom',
+        },
+        stagger: {
+          amount: 5
+        },
+        color: '#000',
+        ease: 'sine.out'
+      })
   }
 
   prevuis() {
@@ -227,6 +240,26 @@ export class HomeComponent implements OnInit {
         .to(".vertical-row", {
           yPercent: 0,
           duration: 1.5,
+          ease: myEase
+        }, "<")
+        .to("#deido_city", {
+          fill: "#1B1B1B",
+          duration: .3,
+          ease: myEase
+        }, "<")
+        .to("#Deido", {
+          fill: "#FFFFFF",
+          duration: .1,
+          ease: myEase
+        }, "<.1")
+        .to("#akwa_city", {
+          fill: "#FFF455",
+          duration: 1.5,
+          ease: myEase
+        }, "<")
+        .to("#Akwa", {
+          fill: "#000000",
+          duration: .1,
           ease: myEase
         }, "<")
       this.slide.set(1);
@@ -244,6 +277,26 @@ export class HomeComponent implements OnInit {
             duration: 1.5,
             ease: myEase
           }, "<")
+          .to("#Vector_1", {
+            fill: "#1B1B1B",
+            duration: .3,
+            ease: myEase
+          }, "<")
+          .to("#bependa", {
+            fill: "#FFFFFF",
+            duration: .1,
+            ease: myEase
+          }, "<")
+          .to("#deido_city", {
+            fill: "#FFF455",
+            duration: 1.5,
+            ease: myEase
+          }, "<")
+          .to("#Deido", {
+            fill: "#000000",
+            duration: .1,
+            ease: myEase
+          }, "<")
         this.slide.set(2);
       } else {
         if (this.slide() === 4) {
@@ -257,6 +310,26 @@ export class HomeComponent implements OnInit {
             .to(".vertical-row", {
               yPercent: -180,
               duration: 1.5,
+              ease: myEase
+            }, "<")
+            .to("#new_bell_1", {
+              fill: "#1B1B1B",
+              duration: .3,
+              ease: myEase
+            }, "<")
+            .to("#new_bell", {
+              fill: "#FFFFFF",
+              duration: .1,
+              ease: myEase
+            }, "<")
+            .to("#Vector_1", {
+              fill: "#FFF455",
+              duration: 1.5,
+              ease: myEase
+            }, "<")
+            .to("#bependa", {
+              fill: "#000000",
+              duration: .1,
               ease: myEase
             }, "<")
           this.slide.set(3);
@@ -274,6 +347,26 @@ export class HomeComponent implements OnInit {
                 duration: 1.5,
                 ease: myEase
               }, "<")
+              .to("#Bonandjo_1", {
+                fill: "#1B1B1B",
+                duration: .3,
+                ease: myEase
+              }, "<")
+              .to("#Bonandjo", {
+                fill: "#FFFFFF",
+                duration: .1,
+                ease: myEase
+              }, "<")
+              .to("#new_bell_1", {
+                fill: "#FFF455",
+                duration: 1.5,
+                ease: myEase
+              }, "<")
+              .to("#new_bell", {
+                fill: "#000000",
+                duration: .1,
+                ease: myEase
+              }, "<")
             this.slide.set(4);
           } else {
             if (this.slide() === 6) {
@@ -287,6 +380,26 @@ export class HomeComponent implements OnInit {
                 .to(".vertical-row", {
                   yPercent: -325,
                   duration: 1.5,
+                  ease: myEase
+                }, "<")
+                .to("#bonaberi_1", {
+                  fill: "#1B1B1B",
+                  duration: .3,
+                  ease: myEase
+                }, "<")
+                .to("#bonaberi", {
+                  fill: "#FFFFFF",
+                  duration: .1,
+                  ease: myEase
+                }, "<")
+                .to("#Bonandjo_1", {
+                  fill: "#FFF455",
+                  duration: 1.5,
+                  ease: myEase
+                }, "<")
+                .to("#Bonandjo", {
+                  fill: "#000000",
+                  duration: .1,
                   ease: myEase
                 }, "<")
               this.slide.set(5);
@@ -310,6 +423,26 @@ export class HomeComponent implements OnInit {
           duration: 1.5,
           ease: myEase
         }, "<")
+        .to("#akwa_city", {
+          fill: "#1B1B1B",
+          duration: .3,
+          ease: myEase
+        }, "<")
+        .to("#Akwa", {
+          fill: "#FFFFFF",
+          duration: .1,
+          ease: myEase
+        }, "<")
+        .to("#deido_city", {
+          fill: "#FFF455",
+          duration: 1.5,
+          ease: myEase
+        }, "<")
+        .to("#Deido", {
+          fill: "#000000",
+          duration: .1,
+          ease: myEase
+        }, "<")
       this.slide.set(2);
     } else {
       if (this.slide() === 2) {
@@ -323,6 +456,26 @@ export class HomeComponent implements OnInit {
           .to(".vertical-row", {
             yPercent: -180,
             duration: 1.5,
+            ease: myEase
+          }, "<")
+          .to("#deido_city", {
+            fill: "#1B1B1B",
+            duration: .3,
+            ease: myEase
+          }, "<")
+          .to("#Deido", {
+            fill: "#FFFFFF",
+            duration: .1,
+            ease: myEase
+          }, "<")
+          .to("#Vector_1", {
+            fill: "#FFF455",
+            duration: 1.5,
+            ease: myEase
+          }, "<")
+          .to("#bependa", {
+            fill: "#000000",
+            duration: .1,
             ease: myEase
           }, "<")
         this.slide.set(3);
@@ -340,6 +493,26 @@ export class HomeComponent implements OnInit {
               duration: 1.5,
               ease: myEase
             }, "<")
+            .to("#Vector_1", {
+              fill: "#1B1B1B",
+              duration: .3,
+              ease: myEase
+            }, "<")
+            .to("#bependa", {
+              fill: "#FFFFFF",
+              duration: .1,
+              ease: myEase
+            }, "<")
+            .to("#new_bell_1", {
+              fill: "#FFF455",
+              duration: 1.5,
+              ease: myEase
+            }, "<")
+            .to("#new_bell", {
+              fill: "#000000",
+              duration: .1,
+              ease: myEase
+            }, "<")
           this.slide.set(4);
         } else {
           if (this.slide() === 4) {
@@ -355,6 +528,26 @@ export class HomeComponent implements OnInit {
                 duration: 1.5,
                 ease: myEase
               }, "<")
+              .to("#new_bell_1", {
+                fill: "#1B1B1B",
+                duration: .3,
+                ease: myEase
+              }, "<")
+              .to("#new_bell", {
+                fill: "#FFFFFF",
+                duration: .1,
+                ease: myEase
+              }, "<")
+              .to("#Bonandjo_1", {
+                fill: "#FFF455",
+                duration: 1.5,
+                ease: myEase
+              }, "<")
+              .to("#Bonandjo", {
+                fill: "#000000",
+                duration: .1,
+                ease: myEase
+              }, "<")
             this.slide.set(5);
           } else {
             if (this.slide() === 5) {
@@ -368,6 +561,26 @@ export class HomeComponent implements OnInit {
                 .to(".vertical-row", {
                   yPercent: -400,
                   duration: 1.5,
+                  ease: myEase
+                }, "<")
+                .to("#Bonandjo_1", {
+                  fill: "#1B1B1B",
+                  duration: .3,
+                  ease: myEase
+                }, "<")
+                .to("#Bonandjo", {
+                  fill: "#FFFFFF",
+                  duration: .1,
+                  ease: myEase
+                }, "<")
+                .to("#bonaberi_1", {
+                  fill: "#FFF455",
+                  duration: 1.5,
+                  ease: myEase
+                }, "<")
+                .to("#bonaberi", {
+                  fill: "#000000",
+                  duration: .1,
                   ease: myEase
                 }, "<")
               this.slide.set(6);

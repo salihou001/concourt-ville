@@ -109,7 +109,20 @@ export class HotelsComponent {
 
     mm.add("(min-width: 769px)", () => {
       // Animation pour les écrans plus grands
-      gsap.to(".line-left", {
+      const TL = gsap.timeline({});
+      TL 
+      .to(".line-right", {
+        scrollTrigger: {
+          trigger: '.line-right',
+          scrub: 1,
+          start: 'top 60%',
+          end: 'center center',
+        },
+        right: '-160px',
+        duration: 1,
+        ease: 'sine.out'
+      })
+      .to(".line-left", {
         scrollTrigger: {
           trigger: '.line-left',
           scrub: 1,
@@ -120,20 +133,7 @@ export class HotelsComponent {
         duration: 1,
         delay: 1.5,
         ease: 'sine.out'
-      });
-
-      gsap.to(".line-right", {
-        scrollTrigger: {
-          trigger: '.line-right',
-          scrub: 1,
-          start: 'top 60%',
-          end: 'center center',
-        },
-        right: '-160px',
-        duration: 1,
-        delay: 1.5,
-        ease: 'sine.out'
-      });
+      }, "<")
     });
 
   }
