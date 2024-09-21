@@ -10,7 +10,7 @@
     <!-- header end -->
 
     <!-- section hero start -->
-    <section class="hero grid grid-cols-3 mb-[180px] max-h-[660px] max-w-7xl mx-auto">
+    <section class="hero grid grid-cols-3 mb-[180px] max-h-[660px] 2xl:max-w-7xl mx-6 lg:max-w-6xl lg:mx-auto">
         <div class="col-span-2 relative h-[150px]">
             <div class="line-tree absolute -bottom-[1px] h-[1px] w-full bg-[#A8A8A8]"></div>
             <!-- arret start -->
@@ -21,7 +21,7 @@
             <!-- start text zone -->
             <section class="flex flex-col items-end justify-end h-full pb-2">
                 <h1 class="text-top flex items-center w-full overflow-hidden min-h-[55px] text-white">
-                    <div class="first font-[700] text-[45px] whitespace-nowrap leading-[32.81px]">
+                    <div class="first font-[700] lg:text-[45px] text-[25px] whitespace-nowrap leading-[32.81px]">
                         @for (item of douala; track $index) {
                         <span class="chart inline-block">{{item}}</span>
                         }
@@ -30,28 +30,28 @@
                         <img class="h-[35px] w-[35px] object-contain" src="Star 1 (1).svg" alt="start">
                     </div>
                     <div
-                        class="third font-[700] text-[45px] whitespace-nowrap leading-[45.81px] flex items-center gap-[8px]">
-                        <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
+                        class="third font-[700] lg:text-[45px] whitespace-nowrap leading-[45.81px] flex items-center gap-[8px]">
+                        <div class="first font-[700] lg:text-[45px] text-[25px] whitespace-nowrap leading-[45.81px]">
                             @for (item of the; track $index) {
                             <span class="chart inline-block">{{item}}</span>
                             }
                         </div>
-                        <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
+                        <div class="first font-[700] lg:text-[45px] text-[25px] whitespace-nowrap leading-[45.81px]">
                             @for (item of beating; track $index) {
                             <span class="chart inline-block">{{item}}</span>
                             }
                         </div>
-                        <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
+                        <div class="first font-[700] lg:text-[45px] text-[25px] whitespace-nowrap leading-[45.81px]">
                             @for (item of heart; track $index) {
                             <span class="chart inline-block">{{item}}</span>
                             }
                         </div>
-                        <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
+                        <div class="first font-[700] lg:text-[45px] text-[25px] whitespace-nowrap leading-[45.81px]">
                             @for (item of of; track $index) {
                             <span class="chart inline-block">{{item}}</span>
                             }
                         </div>
-                        <span class="text-[#A8A8A8] font-[300] mx-2">
+                        <span class="text-[#A8A8A8] font-[300] mx-2 text-[25px]">
                             @for (item of cameroon; track $index) {
                             <span class="chart inline-block">{{item}}</span>
                             }
@@ -118,19 +118,21 @@
     <!-- section hero end -->
 
     <!-- section about start -->
-    <div class="w-full  flex items-center justify-center max-w-7xl mx-auto">
+    <div class="flex items-center justify-center 2xl:max-w-7xl mx-6 lg:max-w-6xl lg:mx-auto">
         <section class="about bg-[#101010] mt-[25px] rounded-[10px] w-full py-12 px-10">
             <div class="flex items-center gap-4 w-full justify-between">
                 <div class="self-start text-white w-1/2">
-                    <h1 class="font-[700] text-[50px] leading-[60px] mb-8">À propos de <span>Douala</span></h1>
-                    <p class="text-[20px] leading-[37.2px] text-[#8B8B8B] mb-4">Autrefois, des étrangers
+                    <h1 class="font-[700] text-[30px] leading-[40px] lg:leading-[50px] mb-8 lg:text-[40px] md:mb-12">À propos de <span>Douala</span></h1>
+                    <p class="md:text-[20px] md:leading-[27.2px] text-[#8B8B8B] mb-4 text-[14px] leading-[20px] text-justify md:text-left">
+                        Autrefois, des étrangers
                         (parmi
                         lesquels les Allemands), s'installaient sur les côtes du Kamerun
                         pour y exercer du commerce. C'étaient en majeure partie les Duala qui assuraient la médiation
                         entre ces derniers, et ceux de l'intérieur du pays. Les matières premières y étaient troquées,
                         puis vendues contre des produits européens manufacturés.
                     </p>
-                    <p class="text-[20px] leading-[37.2px] text-[#8B8B8B]">De ce commerce, naissaient des
+                    <p class="md:text-[20px] leading-[37.2px] text-[#8B8B8B] text-[16px] md:leading-[27.2px] text-justify md:text-left">
+                        De ce commerce, naissaient des
                         disputes entre les clans Bell, Akwa et Deïdo. Appelés en
                         médiateurs, les anglais n'ont pas répondu.</p>
                     <div
@@ -139,26 +141,26 @@
                         <div><img class="w-[24.3px] h-[24.3px]" src="arrow-right-1.svg" alt="arrow right"></div>
                     </div>
                 </div>
-                <div class="relative">
+                <div class="relative h-full w-1/2">
                     <!-- arrets  -->
                     <img class="absolute -top-4 -left-4" src="top-left.svg" alt="">
                     <img class="absolute -top-4 -right-4" src="top-right.svg" alt="">
                     <img class="absolute -bottom-4 -left-4" src="bottom-left.svg" alt="">
                     <img class="absolute -bottom-4 -right-4" src="bottom-right.svg" alt="">
                     <!-- arrets  -->
-                    <img class="h-[600px]  object-cover" src="Rectangle 5.svg" alt="">
+                    <img class="w-full h-full object-cover min-h-[600px]" src="Rectangle 5.svg" alt="">
                 </div>
             </div>
         </section>
     </div>
     <!-- section about end -->
-    <div class="patrimoine-title max-w-7xl mx-auto pt-[87px]">
+    <div class="patrimoine-title 2xl:max-w-7xl mx-6 pt-[87px] xl:max-w-6xl lg:mx-auto">
         <p class="font-[700] text-[40px] leading-[50px] text-white mb-[10px]">Patrimoine culturel</p>
         <p class="text-[21px] leading-[27.2px] text-[#8B8B8B]">Nos sites historiques, des musées, des arts et
             de la culture locale.</p>
     </div>
     <!-- start patri  -->
-    <section class="patrimoine max-w-7xl mx-auto mt-[100px]">
+    <section class="patrimoine 2xl:max-w-7xl mx-6 mt-[100px] xl:max-w-6xl lg:mx-auto">
         <div class="grid grid-cols-2 grid-rows-2 h-[800px] gap-2">
             @for (item of listBlock; track $index) {
             @defer () {
@@ -169,11 +171,11 @@
     </section>
     <!-- end patri  -->
 
-    <section class="patrimoine mt-[100px] min-w-screen min-h-screen">
+    <section class="patrimoine mt-[100px] min-w-screen min-h-screen md:min-h-0">
         <video class="w-full h-full" loop muted autoplay src="demo.mp4"></video>
     </section>
 
-    <div class="sejourner-title max-w-7xl mx-auto mt-[100px]">
+    <div class="sejourner-title 2xl:max-w-7xl mx-6 mt-[100px] xl:max-w-6xl lg:mx-auto">
         <div class="w-full text-white">
             <p class="font-[700] text-[50px] leading-[60px] mb-[10px]">OÙ SÉJOURNER</p>
             <div class="flex items-center gap-2">
@@ -183,7 +185,7 @@
         </div>
     </div>
     <!-- sejourner -->
-    <section class="sejourner mt-[70px] w-full min-h-[500px] max-w-7xl mx-auto">
+    <section class="sejourner mt-[70px] min-h-[500px] md:min-h-0 2xl:max-w-7xl mx-6 xl:max-w-6xl md:max-w-5xl lg:mx-auto">
         <div class="flex items-center w-full justify-between py-8">
             <div class="w-[40%]">
                 <p class="text-[21px] leading-[27.2px] text-[#8B8B8B]">
@@ -203,15 +205,15 @@
                 <img class="absolute -top-4 -right-4" src="top-right.svg" alt="">
                 <img class="absolute -bottom-4 -left-4" src="bottom-left.svg" alt="">
                 <!-- arrets  -->
-                <img class="h-[600px] w-full  object-cover" src="Rectangle 11.svg" alt="">
+                <img class="h-full w-full object-cover min-h-[600px]" src="Rectangle 11.svg" alt="">
             </div>
         </div>
     </section>
     <!-- sejourner -->
 
     <!-- section card -->
-    <section class="w-full h-[500px]  mt-[100px] max-w-7xl mx-auto">
-        <div class="w-full h-full  grid grid-cols-3 grid-rows-1 gap-4">
+    <section class="h-[440px]  mt-[100px] 2xl:max-w-7xl mx-6 xl:max-w-6xl lg:mx-auto">
+        <div class="h-full  grid md:grid-cols-3 md:grid-rows-1 gap-4 grid-rows-2 grid-cols-2">
             @for (item of listHotels; track $index) {
             @defer () {
             <app-card-hotel [item]="item" />
@@ -220,13 +222,13 @@
         </div>
     </section>
     <!-- section card -->
-    <section class="w-full h-[500px]  mt-[100px] max-w-7xl mx-auto">
+    <section class="h-[500px]  mt-[100px] 2xl:max-w-7xl mx-6 xl:max-w-6xl lg:mx-auto">
         <div class="w-full h-full">
             <img class="w-full h-full object-cover rounded-[10px]" src="Rectangle 11.svg" alt="">
         </div>
     </section>
 
-    <div class="w-full flex items-center justify-between my-[75px] gap-24 max-w-7xl mx-auto">
+    <div class="flex items-center justify-between my-[75px] gap-24 2xl:max-w-7xl mx-6 xl:max-w-6xl lg:mx-auto">
         <div class="max-w-[50%]">
             <p class="text-[#8B8B8B]">
                 Que vous recherchiez des restaurants de quartier, des saveurs internationales ou une cuisine immersive,
@@ -243,7 +245,7 @@
     </div>
 
     <!-- sejourner -->
-    <section class="sejourner mt-[100px] min-h-[500px] max-w-7xl mx-auto">
+    <section class="sejourner mt-[100px] min-h-[500px] 2xl:max-w-7xl mx-6 xl:max-w-6xl lg:mx-auto">
         <div class="flex items-center w-full justify-between py-8">
             <div class="relative w-[50%]">
                 <!-- arrets  -->
@@ -270,14 +272,14 @@
     <!-- sejourner -->
 
     <!-- section card -->
-    <section class="h-[500px]  mt-[100px] max-w-7xl mx-auto">
+    <section class="h-[500px]  mt-[100px] 2xl:max-w-7xl mx-6 xl:max-w-6xl lg:mx-auto">
         <div class="w-full h-full">
             <img class="w-full h-full object-cover rounded-[10px]" src="Rectangle 13.svg" alt="">
         </div>
     </section>
 
 
-    <section class="title mt-[100px] flex items-center justify-center flex-col gap-4 max-w-7xl mx-auto">
+    <section class="title mt-[100px] flex items-center justify-center flex-col gap-4 2xl:max-w-7xl mx-6 xl:max-w-6xl lg:mx-auto">
         <h1 class="font-[700] text-[50px] leading-[50px] text-white text-center">Sorties nocturnes à Douala</h1>
         <p class="text-[18px] leading-[27.2px] text-[#8B8B8B] text-center max-w-[800px]">
             Profitez de la vie nocturne à Douala avec notre liste des meilleurs bars, clubs et cabarets, y compris des
@@ -286,7 +288,7 @@
     </section>
 
     <!-- start patri  -->
-    <section class="patrimoine max-w-7xl mx-auto mt-[100px]">
+    <section class="patrimoine 2xl:max-w-7xl mx-6 mt-[100px] xl:max-w-6xl lg:mx-auto">
         <div class="grid grid-cols-3 grid-rows-2 h-[800px] gap-2">
             <div class="overflow-hidden"><img
                     class="w-full h-full object-cover hover:scale-[1.3] transition duration-500 ease-in-out"
@@ -335,42 +337,42 @@
                 <div class="row flex items-center max-w-full  h-[80%]">
                     <div class="child-1 min-h-full min-w-full">
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">Akwa</h4>
-                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[500px] text-justify">
+                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
                             Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
                             haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
                         </p>
                     </div>
                     <div class="child-1 min-h-full min-w-full">
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">Deido</h4>
-                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[500px] text-justify">
+                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
                             Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
                             haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
                         </p>
                     </div>
                     <div class="child-1 min-h-full min-w-full">
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">Bependa</h4>
-                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[500px] text-justify">
+                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
                             Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
                             haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
                         </p>
                     </div>
                     <div class="child-1 min-h-full min-w-full">
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">New Bell</h4>
-                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[500px] text-justify">
+                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
                             Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
                             haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
                         </p>
                     </div>
                     <div class="child-1 min-h-full min-w-full">
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">Bonandjo</h4>
-                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[500px] text-justify">
+                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
                             Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
                             haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
                         </p>
                     </div>
                     <div class="child-1 min-h-full min-w-full">
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">Bonaberi</h4>
-                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[500px] text-justify">
+                        <p class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
                             Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
                             haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
                         </p>

@@ -8,7 +8,7 @@
     <!-- end nav bar -->
 
     <!-- start hero -->
-    <section class="mt-[100px] h-[150px] w-full px-[45px]">
+    <section class="mt-[100px] h-[150px] w-full 2xl:max-w-7xl mx-auto xl:max-w-6xl md:max-w-5xl">
         <div class="w-full h-full">
             <p class="text-[50px] leading-[60px] font-[700] text-white w-[730px] whitespace-nowrap relative">
                 Trouvez un logement confortable
@@ -23,27 +23,78 @@
     <!-- end hero -->
 
     <!-- start hero -->
-    <section class="mt-[20px] h-[600px] w-full px-[45px]">
+    <section class="mt-[20px] h-[600px] w-full 2xl:max-w-7xl xl:max-w-6xl mx-auto md:max-w-5xl">
         <div class="w-full h-full relative overflow-hidden">
-            <div class="round-1 absolute h-[150px] w-[400px] top-0 left-0 rounded-br-[30px]">
+            <div class="round-1 absolute h-[100px] w-[400px] top-0 left-0 rounded-br-[30px]">
                 <div class="w-full h-full bg-black relative rounded-br-[30px]">
-                    <div class="arc-1 w-[20px] h-[20px] rounded-full bg-transparent absolute top-0 -right-[20px] shadow-shadow-custom"></div>
-                    <div class="arc-1 w-[20px] h-[20px] rounded-full bg-transparent absolute -bottom-[20px] left-0 shadow-shadow-custom"></div>
+                    <div class="flex items-center justify-end text-white w-[80%]">
+                        <div
+                            class="border w-[170px] border-white rounded-[100px] py-4 flex items-center justify-center cursor-pointer">
+                            <span class="font-[400] text-[19.3px] leading-[23.16px]">Book your hotel</span>
+                        </div>
+                        <div class="cursor-pointer"><img src="Frame 5.svg" alt="framer"></div>
+                    </div>
+                    <div
+                        class="arc-1 w-[20px] h-[20px] rounded-full bg-transparent absolute top-0 -right-[20px] shadow-shadow-custom">
+                    </div>
+                    <div
+                        class="arc-1 w-[20px] h-[20px] rounded-full bg-transparent absolute -bottom-[20px] left-0 shadow-shadow-custom">
+                    </div>
                 </div>
             </div>
-            <img class="w-full h-full rounded-tr-[30px] rounded-bl-[10px] rounded-br-[10px]" src="44b63dde-78d1-44a5-b971-5970a18887b9_Entrance_Resorts_World_Las_Vegas.webp" alt="">
+            <img class="w-full h-full rounded-tr-[30px] rounded-bl-[10px] rounded-br-[10px]"
+                src="44b63dde-78d1-44a5-b971-5970a18887b9_Entrance_Resorts_World_Las_Vegas.webp" alt="">
         </div>
     </section>
     <!-- end hero -->
 
-    <section class="mt-[50px] h-[800px] w-full px-[45px]">
-        <div class="w-full h-full border">
-            
+    <!--  -->
+    <div class="w-full  2xl:max-w-7xl mx-auto xl:max-w-6xl mt-[100px] md:max-w-5xl">
+        <h1 class="font-[700] text-[50px] leading-[60px] text-white mb-[60px] relative overflow-hidden">
+            Hotels in  douala city
+            <div class="line-right absolute -right-full top-1/2">
+                <img src="line-right.svg" alt="line svg">
+            </div>
+        </h1>
+        <p class="text-[31px] leading-[37.2px] text-[#8B8B8B] max-w-[50%]">
+            Douala propose des chambres pour tous les goûts. Que vous cherchiez à visiter les sites touristiques des
+            arrondissements ou à être au centre de tout, ces hôtels feront de la ville votre chez vous loin de chez
+            vous.
+        </p>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="w-full  2xl:max-w-7xl mx-auto mt-[100px] xl:max-w-6xl md:max-w-5xl">
+        <img class="w-full h-full" src="Rectangle 12.svg" alt="">
+    </div>
+    <!--  -->
+
+
+    <section class="mt-[100px] w-full h-auto py-4 2xl:max-w-7xl mx-auto xl:max-w-6xl">
+        <div class="w-full h-full  grid grid-cols-3 grid-rows-1 gap-8 md:gap-4">
+            @for (item of listHotels; track $index) {
+            @defer () {
+            <app-card-hotel [item]="item" />
+            }
+            }
         </div>
     </section>
-    <section class="mt-[50px] h-[800px] w-full px-[45px]">
-        <div class="w-full h-full border">
-            
+
+    <div class="labels-section mt-[100px] w-full 2xl:max-w-7xl mx-auto relative overflow-hidden xl:max-w-6xl">
+        <div class="line-left absolute -left-full top-1/2">
+            <img src="line-left.svg" alt="line svg">
+        </div>
+        <h1 class="font-[700] text-[50px] leading-[60px] text-white text-center">Nouveaux Hôtels a Douala</h1>
+    </div>
+
+    <section class="mt-[100px] w-full 2xl:max-w-7xl mx-auto xl:max-w-6xl">
+        <div class="w-full h-full  grid grid-cols-3 grid-rows-1 gap-8">
+            @for (item of newHotels; track $index) {
+            @defer () {
+            <app-card-hotel [item]="item" />
+            }
+            }
         </div>
     </section>
     <!-- start footer -->

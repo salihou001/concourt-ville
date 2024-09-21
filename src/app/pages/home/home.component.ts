@@ -1,6 +1,5 @@
 import { Component, OnInit, Renderer2, inject, signal } from '@angular/core';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import Lenis from '@studio-freight/lenis';
 import gsap from 'gsap';
 import CustomEase from 'gsap/CustomEase';
 import { Block, Hotel } from '../../shared/interface/interface';
@@ -98,19 +97,11 @@ export class HomeComponent implements OnInit {
   }
   
   ngAfterViewInit(): void {
-    const lenis = new Lenis();
-    lenis.on('scroll', (e: any) => {
-    })
-    lenis.on('scroll', ScrollTrigger.update)
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 500)
-    })
-    gsap.ticker.lagSmoothing(0);
 
     const TL = gsap.timeline({});
     TL
       .fromTo('.hero .chart', {
-        y: '45px',
+        y: '25px',
         opacity: 0,
       }, {
         y: '*',
