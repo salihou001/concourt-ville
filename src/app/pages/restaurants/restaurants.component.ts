@@ -17,35 +17,49 @@ import { BlockRestoComponent } from "../../shared/components/block-resto/block-r
 export class RestaurantsComponent {
   listHotels: Hotel[] = [
     {
-      id: '1',
-      image: 'Rectangle 9 (1)',
-      desc: 'Douala Design Hôtel'
-    },
-    {
-      id: '2',
-      image: 'Rectangle 9 (2)',
-      desc: 'Douala Design Hôtel'
-    },
-    {
-      id: '3',
-      image: 'Rectangle 9 (3)',
-      desc: 'Douala Design Hôtel'
-    },
-    {
       id: '4',
-      image: 'Rectangle 9 (4)',
-      desc: 'Douala Design Hôtel'
+      image: 'Rectangle 9 (2)',
+      desc: 'Royal Café Lounge',
+      label: 'Restaurants',
+      city: 'Bonanjo'
+      
     },
     {
       id: '5',
-      image: 'Rectangle 9 (5)',
-      desc: 'Douala Design Hôtel'
+      image: 'Rectangle 9 (3)',
+      desc: 'Pizza Hut',
+      label: 'Restaurants',
+      city: 'Bonanjo'
     },
     {
       id: '6',
-      image: 'Rectangle 9',
-      desc: 'Douala Design Hôtel'
+      image: 'Rectangle 9 (4)',
+      desc: 'Le Grilladin',
+      label: 'Restaurants',
+      city: 'Bonamoussadi'
     },
+    {
+      id: '4',
+      image: 'Rectangle 9 (5)',
+      desc: 'Gaston Gourmet',
+      label: 'Restaurants',
+      city: 'Bonanjo'
+      
+    },
+    {
+      id: '5',
+      image: 'Rectangle 9',
+      desc: 'La Crêperie',
+      label: 'Restaurants',
+      city: 'Bonanjo'
+    },
+    {
+      id: '6',
+      image: 'Rectangle 9 (1)',
+      desc: 'The Yard Restaurant Bar',
+      label: 'Restaurants',
+      city: 'Bonamoussadi'
+    }
   ];
 
   newHotels: Hotel[] = [

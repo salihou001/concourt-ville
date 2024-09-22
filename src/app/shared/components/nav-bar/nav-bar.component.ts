@@ -17,5 +17,6 @@ export class NavBarComponent {
   openMenu = async () => await this.commonSrv.openMenu();
   goToHotels = async () => await this.router.navigate(['hotels']);
   goToRestaurant = async () => await this.router.navigate(['restaurants']);
+  goToNocturne = async () => await this.router.navigate(['nocturnes']);
 
 }

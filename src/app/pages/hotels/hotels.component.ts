@@ -3,11 +3,7 @@ import { NavBarComponent } from "../../shared/components/nav-bar/nav-bar.compone
 import { FooterComponent } from "../../shared/components/footer/footer.component";
 import { MenuComponent } from "../../shared/components/menu/menu.component";
 import { Hotel } from '../../shared/interface/interface';
-import { Component, OnInit } from '@angular/core';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
-
-gsap.registerPlugin(ScrollTrigger);
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hotels',
@@ -16,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './hotels.component.html',
   styleUrl: './hotels.component.scss'
 })
-export class HotelsComponent implements OnInit {
+export class HotelsComponent {
   listHotels: Hotel[] = [
     {
       id: '1',
@@ -67,70 +63,4 @@ export class HotelsComponent implements OnInit {
       desc: 'Douala Design Hôtel'
     },
   ];
-
-
-  ngOnInit(): void {
-    this.initAnimation();
-  }
-
-  initAnimation() {
-
-    // Ajoutez des conditions selon les tailles d'écrans
-    // mm.add("(max-width: 768px)", () => {
-      // Animation pour les écrans de moins de 768px
-      // gsap.to(".line-left", {
-      //   scrollTrigger: {
-      //     trigger: '.line-left',
-      //     scrub: 1,
-      //     start: 'top 60%',
-      //     end: 'bottom center',
-      //   },
-      //   left: '-420px',
-      //   duration: 1,
-      //   delay: 1.5,
-      //   ease: 'sine.out'
-      // });
-  
-      // gsap.to(".line-right", {
-      //   scrollTrigger: {
-      //     trigger: '.line-right',
-      //     scrub: 1,
-      //     start: 'top 60%',
-      //     end: 'center center',
-      //   },
-      //   right: '-160px',
-      //   duration: 1,
-      //   delay: 1.5,
-      //   ease: 'sine.out'
-      // });
-    // });
-
-    // mm.add("(min-width: 769px)", () => {
-      // Animation pour les écrans plus grands
-      const TL = gsap.timeline({});
-      TL 
-      .to(".line-right", {
-        scrollTrigger: {
-          trigger: '.line-right',
-          scrub: 1,
-          start: 'top 60%',
-          end: 'center center',
-        },
-        right: '-160px',
-        duration: 1,
-        ease: 'sine.out'
-      })
-      .to(".line-left", {
-          scrollTrigger: {
-            trigger: '.line-left',
-            scrub: 1,
-            start: 'top 60%',
-            end: 'bottom center',
-          },
-          left: '-420px',
-          duration: 1,
-          delay: 1.5,
-          ease: 'sine.out'
-        })
-  }
 }

@@ -11,14 +11,20 @@
                     }
                 </div>
                 <div class="menu-2 px-4 h-[40px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
-                    (mouseenter)="fromUp('2')" (mouseenter)="fromUp('2')">
+                    (mouseenter)="fromUp('2')" (mouseenter)="fromUp('2')" (click)="goToHotels()">
                     @for (item of hotels; track $index) {
                     <span class="chart inline-block text-[40px] font-Urbanist-bold text-black">{{item}}</span>
                     }
                 </div>
                 <div class="menu-3 px-4 h-[40px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
-                    (mouseenter)="fromUp('3')" (mouseenter)="fromUp('3')">
+                    (mouseenter)="fromUp('3')" (mouseenter)="fromUp('3')" (click)="goToRestaurants()">
                     @for (item of restaurants; track $index) {
+                    <span class="chart inline-block text-[40px] font-Urbanist-bold text-black">{{item}}</span>
+                    }
+                </div>
+                <div class="menu-4 px-4 h-[40px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
+                    (mouseenter)="fromUp('4')" (mouseenter)="fromUp('4')" (click)="goToNocture()">
+                    @for (item of nocturne; track $index) {
                     <span class="chart inline-block text-[40px] font-Urbanist-bold text-black">{{item}}</span>
                     }
                 </div>

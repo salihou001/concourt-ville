@@ -9,4 +9,6 @@ export interface Hotel {
     id?: string,
     image?: string,
     desc?: string;
+    label?: string;
+    city?: string;
 }
