@@ -6,8 +6,6 @@ import { CardHotelComponent } from "../../shared/components/card-hotel/card-hote
 import { Hotel } from '../../shared/interface/interface';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-// Créez un MediaMatcher pour gérer différents breakpoints
-const mm = gsap.matchMedia();
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './hotels.component.html',
   styleUrl: './hotels.component.scss'
 })
-export class HotelsComponent {
+export class HotelsComponent implements OnInit {
   listHotels: Hotel[] = [
     {
       id: '1',
@@ -71,14 +69,14 @@ export class HotelsComponent {
   ];
 
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     this.initAnimation();
   }
 
   initAnimation() {
 
     // Ajoutez des conditions selon les tailles d'écrans
-    mm.add("(max-width: 768px)", () => {
+    // mm.add("(max-width: 768px)", () => {
       // Animation pour les écrans de moins de 768px
       // gsap.to(".line-left", {
       //   scrollTrigger: {
@@ -105,9 +103,9 @@ export class HotelsComponent {
       //   delay: 1.5,
       //   ease: 'sine.out'
       // });
-    });
+    // });
 
-    mm.add("(min-width: 769px)", () => {
+    // mm.add("(min-width: 769px)", () => {
       // Animation pour les écrans plus grands
       const TL = gsap.timeline({});
       TL 
@@ -123,18 +121,16 @@ export class HotelsComponent {
         ease: 'sine.out'
       })
       .to(".line-left", {
-        scrollTrigger: {
-          trigger: '.line-left',
-          scrub: 1,
-          start: 'top 60%',
-          end: 'bottom center',
-        },
-        left: '-420px',
-        duration: 1,
-        delay: 1.5,
-        ease: 'sine.out'
-      }, "<")
-    });
-
+          scrollTrigger: {
+            trigger: '.line-left',
+            scrub: 1,
+            start: 'top 60%',
+            end: 'bottom center',
+          },
+          left: '-420px',
+          duration: 1,
+          delay: 1.5,
+          ease: 'sine.out'
+        })
   }
 }

@@ -258,7 +258,7 @@ export class HomeComponent implements OnInit {
           ease: myEase
         }, "<")
         .to("#Akwa", {
-          fill: "#000000",
+          fill: "#0E3A5D",
           duration: .1,
           ease: myEase
         }, "<")
@@ -293,7 +293,7 @@ export class HomeComponent implements OnInit {
             ease: myEase
           }, "<")
           .to("#Deido", {
-            fill: "#000000",
+            fill: "#0E3A5D",
             duration: .1,
             ease: myEase
           }, "<")
@@ -328,7 +328,7 @@ export class HomeComponent implements OnInit {
               ease: myEase
             }, "<")
             .to("#bependa", {
-              fill: "#000000",
+              fill: "#0E3A5D",
               duration: .1,
               ease: myEase
             }, "<")
@@ -363,7 +363,7 @@ export class HomeComponent implements OnInit {
                 ease: myEase
               }, "<")
               .to("#new_bell", {
-                fill: "#000000",
+                fill: "#0E3A5D",
                 duration: .1,
                 ease: myEase
               }, "<")
@@ -398,7 +398,7 @@ export class HomeComponent implements OnInit {
                   ease: myEase
                 }, "<")
                 .to("#Bonandjo", {
-                  fill: "#000000",
+                  fill: "#0E3A5D",
                   duration: .1,
                   ease: myEase
                 }, "<")
@@ -439,7 +439,7 @@ export class HomeComponent implements OnInit {
           ease: myEase
         }, "<")
         .to("#Deido", {
-          fill: "#000000",
+          fill: "#0E3A5D",
           duration: .1,
           ease: myEase
         }, "<")
@@ -474,7 +474,7 @@ export class HomeComponent implements OnInit {
             ease: myEase
           }, "<")
           .to("#bependa", {
-            fill: "#000000",
+            fill: "#0E3A5D",
             duration: .1,
             ease: myEase
           }, "<")
@@ -509,7 +509,7 @@ export class HomeComponent implements OnInit {
               ease: myEase
             }, "<")
             .to("#new_bell", {
-              fill: "#000000",
+              fill: "#0E3A5D",
               duration: .1,
               ease: myEase
             }, "<")
@@ -544,7 +544,7 @@ export class HomeComponent implements OnInit {
                 ease: myEase
               }, "<")
               .to("#Bonandjo", {
-                fill: "#000000",
+                fill: "#0E3A5D",
                 duration: .1,
                 ease: myEase
               }, "<")
@@ -579,7 +579,7 @@ export class HomeComponent implements OnInit {
                   ease: myEase
                 }, "<")
                 .to("#bonaberi", {
-                  fill: "#000000",
+                  fill: "#0E3A5D",
                   duration: .1,
                   ease: myEase
                 }, "<")

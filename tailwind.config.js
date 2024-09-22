@@ -8,8 +8,9 @@ module.exports = {
         custom: ['Urbanist-bold', 'sans-serif'],
       },
       boxShadow: {
-        'shadow-custom': '-10px -10px 0px black'
-      }
+        'shadow-custom': '-10px -10px 0px black',
+        'boxShadowBottom': '-10px 10px 0px black'
+      },
     },
   },
   plugins: [],
