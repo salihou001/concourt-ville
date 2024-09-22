@@ -2,6 +2,8 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
+import CustomEase from 'gsap/CustomEase';
+const myEase = CustomEase.create("abouEase", "1.000, 0.005, 0.000, 0.995");
 // Créez un MediaMatcher pour gérer différents breakpoints
 const mm = gsap.matchMedia();
 

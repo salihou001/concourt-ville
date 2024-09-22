@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuComponent } from "../../shared/components/menu/menu.component";
+import { CardHotelComponent } from "../../shared/components/card-hotel/card-hotel.component";
 import { NavBarComponent } from "../../shared/components/nav-bar/nav-bar.component";
 import { FooterComponent } from "../../shared/components/footer/footer.component";
-import { CardHotelComponent } from "../../shared/components/card-hotel/card-hotel.component";
+import { MenuComponent } from "../../shared/components/menu/menu.component";
 import { Hotel } from '../../shared/interface/interface';
+import { Component, OnInit } from '@angular/core';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 
