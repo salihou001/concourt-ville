@@ -1,11 +1,11 @@
 <div class="super-container">
 
     <!-- start menu bergur -->
-    <app-menu></app-menu>
+    @defer () { <app-menu></app-menu> }
     <!-- end menu bergur -->
 
     <!-- header start -->
-    @defer () { <app-nav-bar></app-nav-bar> }
+     <app-nav-bar></app-nav-bar> 
     <!-- header end -->
 
     <!-- section hero start -->
