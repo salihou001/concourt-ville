@@ -3,7 +3,8 @@ import { NavBarComponent } from "../../shared/components/nav-bar/nav-bar.compone
 import { FooterComponent } from "../../shared/components/footer/footer.component";
 import { MenuComponent } from "../../shared/components/menu/menu.component";
 import { Hotel } from '../../shared/interface/interface';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-hotels',
@@ -12,7 +13,7 @@ import { Component } from '@angular/core';
   templateUrl: './hotels.component.html',
   styleUrl: './hotels.component.scss'
 })
-export class HotelsComponent {
+export class HotelsComponent implements OnInit {
   listHotels: Hotel[] = [
     {
       id: '1',
@@ -63,4 +64,13 @@ export class HotelsComponent {
       desc: 'Douala Design Hôtel'
     },
   ];
+
+  ngOnInit(): void {
+    gsap.to(".cercle", {
+      rotate: -360,
+      duration: 2,
+      ease: 'sine.inOut',
+      repeat: -1
+    })
+  }
 }

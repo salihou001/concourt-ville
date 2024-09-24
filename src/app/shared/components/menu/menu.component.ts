@@ -34,7 +34,7 @@ export class MenuComponent {
       }, {
         y: '*',
         stagger: {
-          amount: .2
+          amount: .3
         },
         ease: 'sine.out'
       })
