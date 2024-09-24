@@ -78,6 +78,28 @@ export class HomeComponent  {
       desc: 'Douala Design Hôtel'
     },
   ]
+  listHotels2: Hotel[] = [
+    {
+      id: '1',
+      image: 'Rectangle 9',
+      desc: 'Douala Design Hôtel'
+    },
+    {
+      id: '2',
+      image: 'Rectangle 11',
+      desc: 'Douala Design Hôtel'
+    },
+    {
+      id: '3',
+      image: 'Rectangle 12',
+      desc: 'Douala Design Hôtel'
+    },
+    {
+      id: '3',
+      image: 'Rectangle 12',
+      desc: 'Douala Design Hôtel'
+    },
+  ]
   commonSrv = inject(CommonService);
   ngAfterViewInit(): void { this.commonSrv.initHomeAnimtation(); }
 

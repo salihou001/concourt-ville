@@ -1,12 +1,12 @@
 <div class="relative cursor-pointer h-full overflow-hidden" (mouseenter)="showBlock(item().id)" (mouseleave)="hideBlock(item().id)">
     <img class="h-full w-full object-cover absolute top-0 -z-1" src="{{item().image}}.svg" alt="" loading="lazy">
     <div class="w-full h-[150px] bg-[#101010] absolute -bottom-[150px] px-4 py-2" id="block-{{item().id}}">
-        <h2 class="font-[700] text-[18px] leading-[25px] text-white mb-4">{{item().f_text}}</h2>
-        <h5 class="font-[700] text-[14.3px] leading-[18.16px] text-[#8B8B8B] mb-2">{{item().l_text}}</h5>
+        <h2 class="font-[700] text-[14px] leading-[16.8px] md:text-[18px] md:leading-[25px] text-white mb-2 md:mb-4">{{item().f_text}}</h2>
+        <h5 class="font-[700] md:text-[14.3px] text-[12px] leading-[14.4px] md:leading-[18.16px] text-[#8B8B8B] md:mb-2">{{item().l_text}}</h5>
         <div class="w-full flex items-end justify-end">
             <div class="flex items-center gap-2">
-                <div class="text-white text-[19.3px] font-[700] leading-[23.16px]">En savoir plus</div>
-                <div><img src="arrow-right-3.svg" alt="arrow right"></div>
+                <div class="text-white text-[14px] md:text-[19.3px] font-[700] leading-[16.8px] md:leading-[23.16px]">En savoir plus</div>
+                <div><img class="w-[16px] h-[16px] md:w-aut md:h-auto" src="arrow-right-3.svg" alt="arrow right"></div>
             </div>
         </div>
     </div>
