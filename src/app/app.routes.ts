@@ -17,4 +17,8 @@ export const routes: Routes = [
         path: 'nocturnes',
         loadComponent: () => import('./pages/nocturne/nocturne.component').then(m => m.NocturneComponent)
       },
+      {
+        path: 'divertissements',
+        loadComponent: () => import('./pages/divertissements/divertissements.component').then(m => m.DivertissementsComponent)
+      },
 ];

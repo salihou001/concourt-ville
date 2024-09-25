@@ -5,6 +5,8 @@ import { MenuComponent } from "../../shared/components/menu/menu.component";
 import { Hotel } from '../../shared/interface/interface';
 import { Component, OnInit } from '@angular/core';
 import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-hotels',

@@ -3,7 +3,7 @@
         <div class="close absolute right-12 md:right-16 top-16 z-20 cursor-pointer" (click)="closeMenu()"><img
                 class="w-[43px] h-[43px]" src="close-1.svg" alt="close icon"></div>
         <div class="menu-wrapper h-full w-full flex items-center justify-center">
-            <div class="menu-items flex flex-col items-start gap-5">
+            <div class="menu-items flex flex-col items-start gap-6">
                 <div class="menu-1 px-4 h-[40px] leading-[50px] font-[900] cursor-pointer overflow-hidden" 
                     (mouseenter)="fromUp('1')" (mouseleave)="fromUp('1')" (click)="goToHome()">
                     @for (item of home; track $index) {
@@ -25,6 +25,18 @@
                 <div class="menu-4 px-4 h-[40px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
                     (mouseenter)="fromUp('4')" (mouseenter)="fromUp('4')" (click)="goToNocture()">
                     @for (item of nocturne; track $index) {
+                    <span class="chart inline-block text-[40px] font-Urbanist-bold text-black">{{item}}</span>
+                    }
+                </div>
+                <div class="menu-4 px-4 h-[40px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
+                    (mouseenter)="fromUp('4')" (mouseenter)="fromUp('4')" (click)="goToNocture()">
+                    @for (item of nocturne; track $index) {
+                    <span class="chart inline-block text-[40px] font-Urbanist-bold text-black">{{item}}</span>
+                    }
+                </div>
+                <div class="menu-4 px-4 h-[40px] leading-[50px] font-[900] cursor-pointer overflow-hidden"
+                    (mouseenter)="fromUp('4')" (mouseenter)="fromUp('4')" (click)="goToDivert()">
+                    @for (item of divertissements; track $index) {
                     <span class="chart inline-block text-[40px] font-Urbanist-bold text-black">{{item}}</span>
                     }
                 </div>

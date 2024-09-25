@@ -31,6 +31,11 @@ export class CommonService {
     this.closeMenu();
   }
 
+  goToDivert = async () => { 
+    await this.router.navigate(['divertissements']) 
+    this.closeMenu();
+  }
+
   openMenu() {
     const TL = gsap.timeline();
     TL

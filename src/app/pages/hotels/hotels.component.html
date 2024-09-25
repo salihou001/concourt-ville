@@ -10,7 +10,7 @@
     <!-- start hero -->
     <section class="mt-[100px] md:h-[150px] 2xl:max-w-7xl lg:mx-auto xl:max-w-6xl mx-6">
         <div class="w-full h-full relative">
-            <img class="absolute hidden cercle md:block right-0 h-full" src="cercle.svg" alt="cercle">
+            <img class="absolute hidden md:block right-0 h-full" src="cercle.svg" alt="cercle">
             <p class="text-[35px] md:text-[50px] leading-[45px] md:leading-[60px] font-[700] text-white md:w-[730px] w-full whitespace-normal md:whitespace-nowrap relative">
                 Trouvez un logement confortable
                 <img class="absolute hidden md:block -right-20 md:-right-12 -top-10" src="start-2.svg" alt=""> 
@@ -72,9 +72,9 @@
     <section class="pb-8 hidden md:block mt-[100px] py-4 2xl:max-w-7xl mx-6 lg:mx-auto xl:max-w-6xl">
         <div class="w-full h-full  grid grid-cols-3 grid-rows-1 gap-8 md:gap-4">
             @for (item of listHotels; track $index) {
-            @defer () {
-            <app-card-hotel [item]="item" />
-            }
+                @defer () {
+                <app-card-hotel [item]="item" />
+                }
             }
         </div>
     </section>
@@ -100,9 +100,9 @@
     <section class="hidden md:block my-[100px] 2xl:max-w-7xl mx-6 lg:mx-auto xl:max-w-6xl pb-8">
         <div class="w-full h-full  grid grid-cols-3 grid-rows-1 gap-8">
             @for (item of newHotels; track $index) {
-            @defer () {
-            <app-card-hotel [item]="item" />
-            }
+                @defer () {
+                <app-card-hotel [item]="item" />
+                }
             }
         </div>
     </section>

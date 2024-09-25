@@ -14,8 +14,9 @@ export class MenuComponent {
 
   home = ['H', 'o', 'm', 'e'];
   hotels = ['H', 'o', 't', 'e', 'l', 's'];
-  restaurants = ['R', 'e', 's', 't', 'a', 'u', 'r', 'a', 'n', 't', 's'];
   nocturne = ['N', 'o', 'c', 't', 'u','r', 'n', 'e'];
+  restaurants = ['R', 'e', 's', 't', 'a', 'u', 'r', 'a', 'n', 't', 's'];
+  divertissements = ['D', 'i', 'v', 'e', 'r', 't', 'i', 's', 's', 'e', 'm', 'e', 'n', 't'];
 
   private commonSrv = inject(CommonService);
 
@@ -24,6 +25,7 @@ export class MenuComponent {
   goToHotels = async () => await this.commonSrv.goToHotels();
   goToNocture = async () => await this.commonSrv.goToNocture();
   goToRestaurants = async () => await this.commonSrv.goToRestaurants();
+  goToDivert = async () => await this.commonSrv.goToDivert();
 
   fromUp(row: string) {
     console.log(row);
