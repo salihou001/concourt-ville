@@ -22,7 +22,7 @@ export class FooterComponent implements OnInit {
       duration: 1,
       repeat: -1
     });
-    gsap.to(".footer-lines", {
+    gsap.fromTo(".footer-lines", { top: '0px' }, {
       scrollTrigger: {
         trigger: '.footer-lines',
         scrub: 1,

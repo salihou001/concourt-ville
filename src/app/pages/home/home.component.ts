@@ -4,7 +4,7 @@ import { NavBarComponent } from "../../shared/components/nav-bar/nav-bar.compone
 import { FooterComponent } from "../../shared/components/footer/footer.component";
 import { MenuComponent } from "../../shared/components/menu/menu.component";
 import { Block, Hotel } from '../../shared/interface/interface';
-import { Component, inject, signal } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import CustomEase from 'gsap/CustomEase';
@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent  {
+export class HomeComponent implements OnInit {
 
   welcome = ['W', 'e', 'l', 'c', 'o', 'm', 'e'];
   douala = ['D', 'o', 'u', 'a', 'l', 'a'];
@@ -101,7 +101,7 @@ export class HomeComponent  {
     },
   ]
   commonSrv = inject(CommonService);
-  ngAfterViewInit(): void { this.commonSrv.initHomeAnimtation(); }
+  ngOnInit(): void { this.commonSrv.initHomeAnimtation(); }
 
   prevuis() {
     if (this.slide() === 2) {

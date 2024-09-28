@@ -30,8 +30,7 @@
                     </div>
                 </div>
             </div>
-            <img class="w-full h-full rounded-tr-[30px] rounded-bl-[10px] rounded-br-[10px]"
-                src="44b63dde-78d1-44a5-b971-5970a18887b9_Entrance_Resorts_World_Las_Vegas.webp" alt="">
+            <video class="w-full h-full rounded-t-[30px] rounded-bl-[10px] rounded-br-[10px] object-cover" loop muted autoplay src="demo.mp4"></video>
         </div>
     </section>
     <!-- end hero -->
@@ -86,9 +85,9 @@
     <section class="pb-8 mt-[100px] py-4 2xl:max-w-7xl mx-6 lg:mx-auto xl:max-w-6xl hidden md:block">
         <div class="w-full h-full  grid grid-cols-3 grid-rows-1 gap-8 md:gap-4">
             @for (item of newHotels; track $index) {
-            @defer () {
-            <app-block-resto [item]="item" />
-            }
+                @defer () {
+                <app-block-resto [item]="item" />
+                }
             }
         </div>
     </section>

@@ -109,7 +109,8 @@
             <span class="arret-3 absolute -right-[2px] -top-[1px] w-[3px] h-[3px] bg-[#A8A8A8] rounded-full"></span>
         </div>
         <div class="row-span-2 p-[10px]">
-            <video class="photograph rounded-md" loop muted autoplay src="demo.mp4"></video>
+            <!-- <video class="photograph rounded-md" loop muted autoplay src="demo.mp4"></video> -->
+            <img class="photograph rounded-md" loop muted autoplay src="la_poste.webp" />
             <div class="flex items-center justify-center">
                 <div class="relative translate-y-12">
                     <img class="rotate h-[154.7px] w-[154.7px]" src="Group 4.svg" alt="">
@@ -316,7 +317,7 @@
     <!-- section card -->
     <section class="h-[200px] md:h-[500px]  mt-[80px] md:mt-[100px] 2xl:max-w-7xl mx-6 xl:max-w-6xl lg:mx-auto">
         <div class="w-full h-full">
-            <img class="w-full h-full object-cover rounded-[10px]" src="Rectangle 13.svg" alt="">
+            <img class="w-full h-full object-cover rounded-[10px]" src="glace-2.webp" alt="">
         </div>
     </section>
 
@@ -467,49 +468,55 @@
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">Deido</h4>
                         <p
                             class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
-                            Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
-                            haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
+                            Hôpital de District de Deido (Littoral, Cameroun) est un hôpital. Hôpital de District de Deido est située proche du commissariat de police Commissariat du 9éme et Cimetière de Deido.
                         </p>
                     </div>
                     <div class="child-1 min-h-full min-w-full">
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">Bependa</h4>
                         <p
                             class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
-                            Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
-                            haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
+                            Bépanda (Littoral, Cameroun) est une banlieue. Bépanda est située à proximité de la localité Rondpoint Bon Fils et de la banlieue Ndogbati.
                         </p>
                     </div>
                     <div class="child-1 min-h-full min-w-full">
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">New Bell</h4>
                         <p
                             class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
-                            Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
-                            haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
+                            New Bell (Littoral, Cameroun) est une banlieue. New Bell est située à proximité de la banlieue Congo et Babylone.
                         </p>
                     </div>
                     <div class="child-1 min-h-full min-w-full">
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">Bonandjo</h4>
                         <p
                             class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
-                            Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
-                            haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
+                            Bonanjo est un quartier administratif et résidentiel de la commune d'arrondissement de Douala I, subdivision de la ville de Douala.
                         </p>
                     </div>
                     <div class="child-1 min-h-full min-w-full">
                         <h4 class="font-[700] text-[50px] leading-[60px] mb-[22px] px-6 text-white mt-12">Bonaberi</h4>
                         <p
                             class="text-[21px] leading-[27.2px] text-[#8B8B8B] px-6  w-[300px] md:w-[500px] text-justify">
-                            Considéré comme le centre-ville, Akwa abrite de nombreux bâtiments coloniaux, des boutiques
-                            haut de gamme, des hôtels et des restaurants. C'est le quartier des affaires par excellence.
+                            Bonaberi, sur la rive droite du fleuve Wouri, se confond avec la commune d'arrondissement de Douala IV, subdivision de la ville de Douala. 
+                            La mairie a pour siège le quartier Bonassama.
                         </p>
                     </div>
                 </div>
                 <div class="footer w-full flex items-end justify-end absolute bottom-0 right-24 pr-10 h-[20%] pb-16">
                     <div class="flex items-center gap-2">
-                        <div (click)="prevuis()"><img class="w-[40px] py-2 object-cover cursor-pointer" src="left.svg"
+                        @if(this.slide() === 1) {
+                            <div (click)="prevuis()"><img class="w-[40px] py-2 object-cover cursor-pointer" src="left-no-color.svg"
                                 alt=""></div>
-                        <div (click)="next()"><img class="w-[40px] py-2 object-cover cursor-pointer" src="right.svg"
+                        }@else {
+                            <div (click)="prevuis()"><img class="w-[40px] py-2 object-cover cursor-pointer" src="left-color.svg"
                                 alt=""></div>
+                        }
+                        @if(this.slide() === 6) {
+                            <div (click)="next()"><img class="w-[40px] py-2 object-cover cursor-pointer" src="right-no-color.svg"
+                                alt=""></div>
+                        }@else {
+                            <div (click)="next()"><img class="w-[40px] py-2 object-cover cursor-pointer" src="right-color.svg"
+                                alt=""></div>
+                        }
                     </div>
                 </div>
             </div>
